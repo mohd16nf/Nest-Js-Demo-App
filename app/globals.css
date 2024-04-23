@@ -2,32 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: black;
+  height: 100%;
+  width: 100%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h3{
+  color: white;
 }
+
+#socials{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#socials .icons{
+  color: orange;
+  font-size: 35px;
+}
+
+#testimonials{
+  color: orange;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+#services-card{
+  color: black;
+}
+
+
+.hero-image-container{
+  margin-left: 50px;
+}
+
+
+.slider-container {
+  position: relative;
+  margin: 50px auto 0; 
+  max-width: 900px;
+}
+
+.review-card {
+  padding: 20px;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.slick-slide:not(.slick-center) .review-card {
+  transform: scale(0.9); 
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.rounded-image {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.slick-dots {
+  bottom: -40px;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.prev-arrow,
+.next-arrow {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prev-arrow:hover,
+.next-arrow:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
